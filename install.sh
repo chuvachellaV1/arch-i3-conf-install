@@ -1,9 +1,8 @@
 #!/bin/bash
 
-sudo pacman -S git i3-wm i3status i3lock dmenu xorg-server xorg-xinit feh alacritty sddm picom firefox
+sudo pacman -S git i3-wm i3status i3lock dmenu xorg-server xorg-xinit feh alacritty sddm picom firefox thunar
 
 #systemctl enable --now NetworkManager
-sudo systemctl enable --now sddm.service
 #sudo pacman -S virtualbox-guest-utils
 #VBoxClient-all
 
@@ -21,4 +20,8 @@ mkdir ~/.config/alacritty/
 git clone https://github.com/chuvachellaV1/arch-i3-conf-install
 cd arch-i3-conf-install
 mv alacritty.toml ~/.config/alacritty/
-startx
+
+
+
+
+sudo systemctl enable --now sddm.service
