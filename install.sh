@@ -21,7 +21,14 @@ git clone https://github.com/chuvachellaV1/arch-i3-conf-install
 cd arch-i3-conf-install
 mv alacritty.toml ~/.config/alacritty/
 
+sudo pacman -S virtualbox virtualbox-host-modules-arch
+sudo modprobe vboxdrv
+echo "vboxdrv" | sudo tee /etc/modules-load.d/virtualbox.conf
+sudo usermod -aG vboxusers $USER
 
+#
+#
+#yay -S virtualbox-ext-oracle
 
 
 sudo systemctl enable --now sddm.service
